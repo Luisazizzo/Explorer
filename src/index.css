@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(135, 218, 241);
+  background: linear-gradient(
+    90deg,
+    rgba(135, 218, 241, 0.5634628851540616) 0%,
+    rgba(255, 255, 255, 1) 81%
+  );
+  color: #333333;
+}

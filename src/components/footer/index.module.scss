@@ -1,0 +1,24 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 50px;
+  background-color: #6ec7e0ee;
+  color: #fff;
+  .ul_footer {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+
+    li {
+      cursor: pointer;
+    }
+  }
+  .linea {
+    background-color: #ffffffca;
+    width: 100%;
+    max-width: 1200px;
+    height: 1px;
+    margin: 10px auto 0;
+  }
+}

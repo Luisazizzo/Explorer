@@ -1,0 +1,11 @@
+.ContentList {
+  h2 {
+    margin: 20px 30px;
+  }
+  .list {
+    display: flex;
+    gap: 20px;
+    overflow: auto;
+    padding: 20px;
+  }
+}
