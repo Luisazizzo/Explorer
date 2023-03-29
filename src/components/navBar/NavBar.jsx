@@ -4,14 +4,18 @@ import styles from "./index.module.scss";
 const NavBar = () => {
   return (
     <div className={styles.NavBar}>
-      <h1>Exsplorer</h1>
+      <h1>
+        <Link className={styles.Link} to="/">
+          Explorer
+        </Link>
+      </h1>
 
       <ul className={styles.ul_pages}>
         <li>Product</li>
         <li>Contact Us</li>
         <li>
           <Link className={styles.Link} to="/about">
-            About Us (Clicca qui)
+            About Us
           </Link>
         </li>
       </ul>

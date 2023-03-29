@@ -1,4 +1,8 @@
 .NavBar {
+  h1 .Link {
+    color: #333333;
+    text-decoration: none;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;

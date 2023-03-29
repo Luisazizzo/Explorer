@@ -8,17 +8,22 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Activity from "./pages/Activity";
-import City from "./pages/City";
+import MainLayout from "./layouts/mainLayout";
+import Activities from "./pages/activities";
+import Activity from "./pages/activities/id";
+import Cities from "./pages/cities";
+import City from "./pages/cities/id";
 import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    <Route element={<MainLayout />}>
       <Route path="/" element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="activity/:id" element={<Activity />} />
-      <Route path="city/:id" element={<City />} />
+      <Route path="activities" element={<Activities />} />
+      <Route path="activities/:id" element={<Activity />} />
+      <Route path="cities" element={<Cities />} />
+      <Route path="cities/:id" element={<City />} />
     </Route>
   )
 );
