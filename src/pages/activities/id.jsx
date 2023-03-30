@@ -6,24 +6,20 @@ import styles from "./id.module.scss";
 export default function Activity() {
   const { id } = useParams();
 
-  const [activity, setActivity] = useState({
-    city: {
-      name: "",
-    },
-  });
+  const [activity, setActivity] = useState({});
 
   useEffect(() => {
-    GET(`activities/${id}`).then((data) => {
+    GET(`xid/${id}?`).then((data) => {
+      console.log(data);
       setActivity(() => data);
     });
   }, []);
 
   return (
     <div className={styles.Activity}>
-      <img src={activity.cover_image_url} alt="" />
-      <h1>{activity.city.name}</h1>
-      <p>{activity.about}</p>
-      <p>{activity.meeting_point}</p>
+      <img src={activity.preview?.source} alt="" />
+      <h1>{activity.name}</h1>
+      <p>{activity.kinds}</p>
     </div>
   );
 }

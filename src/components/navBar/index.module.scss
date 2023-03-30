@@ -20,6 +20,13 @@
       }
     }
   }
+  .form input {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(110, 199, 224, 0.4509803922);
+    background-color: #fff;
+    outline: none;
+  }
   .sing_up {
     border: none;
     background: #fa8443;

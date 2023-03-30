@@ -9,11 +9,11 @@ const Section = () => {
           Scegli la tua esperienza
         </Link>
       </h3>
-      <h3>
+      {/* <h3>
         <Link className={styles.Link} to="/cities">
           Scegli la tua località
         </Link>
-      </h3>
+      </h3> */}
     </div>
   );
 };

@@ -9,11 +9,15 @@ const ContentList = ({ title, endpoint }) => {
   const [activityList, setActivityList] = useState([]);
 
   useEffect(() => {
-    if (endpoint === "cities") {
-      GET(endpoint).then((data) => setCityList(() => data));
-    }
+    // if (endpoint === "cities") {
+    //   GET(endpoint).then((data) => setCityList(() => data));
+    // }
     if (endpoint === "activities") {
-      GET(endpoint).then((data) => setActivityList(() => data.data));
+      GET("radius?radius=1000&lon=2.3488&lat=48.85341&").then((data) => {
+        console.log(data.features);
+
+        setActivityList(() => data.features);
+      });
     }
   }, []);
 
@@ -21,12 +25,13 @@ const ContentList = ({ title, endpoint }) => {
     <div className={styles.ContentList}>
       <h2>{title}</h2>
       <div className={styles.list}>
-        {activityList.map((item, i) => (
-          <CardListActivities data={item} key={i} />
-        ))}
-        {cityList.map((item, i) => (
+        {activityList.map(
+          (item, i) =>
+            item.properties.name && <CardListActivities data={item} key={i} />
+        )}
+        {/* {cityList.map((item, i) => (
           <CardListCity data={item} key={i} />
-        ))}
+        ))} */}
       </div>
     </div>
   );

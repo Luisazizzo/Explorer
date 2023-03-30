@@ -5,14 +5,12 @@ const CardListActivities = ({ data }) => {
   const id = useNavigate();
 
   const onHandleClick = () => {
-    id(`/activities/${data.uuid}`);
+    id(`/activities/${data.properties.xid}`);
   };
   return (
     <div onClick={onHandleClick} className={styles.CardListActivities}>
-      <img src={data.cover_image_url} alt={data.city.name} />
-      <h2>{data.city.name}</h2>
-      <h4>{data.city.time_zone}</h4>
-      <p>{data.title}</p>
+      <h2>{data.properties.name}</h2>
+      <p>{data.properties.kinds.replaceAll(",", ", ").replaceAll("_", " ")}</p>
     </div>
   );
 };
