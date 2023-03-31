@@ -1,0 +1,25 @@
+.Activity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 100px auto;
+  border: 2px solid #fff;
+  width: 350px;
+  padding: 20px;
+  border-radius: 12px;
+
+  .return {
+    position: absolute;
+    left: 52px;
+    top: 122px;
+    font-size: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  img {
+    margin-bottom: 20px;
+    width: 300px;
+  }
+}

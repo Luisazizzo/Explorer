@@ -21,8 +21,16 @@ const NavBar = () => {
       </h1>
 
       <ul className={styles.ul_pages}>
-        <li>Product</li>
-        <li>Contact Us</li>
+        <li>
+          <Link className={styles.Link} to="/product">
+            Product
+          </Link>
+        </li>
+        <li>
+          <Link className={styles.Link} to="/contact">
+            Contact Us
+          </Link>
+        </li>
         <li>
           <Link className={styles.Link} to="/about">
             About Us

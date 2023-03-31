@@ -33,3 +33,21 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .Hero {
+    flex-direction: column;
+    .description_hero {
+      width: 300px;
+    }
+    .img_hero {
+      margin: 30px;
+      width: 300px;
+      height: 300px;
+
+      & img {
+        width: 250px;
+      }
+    }
+  }
+}

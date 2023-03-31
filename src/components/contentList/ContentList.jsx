@@ -14,8 +14,6 @@ const ContentList = ({ title, endpoint }) => {
     // }
     if (endpoint === "activities") {
       GET("radius?radius=1000&lon=2.3488&lat=48.85341&").then((data) => {
-        console.log(data.features);
-
         setActivityList(() => data.features);
       });
     }
