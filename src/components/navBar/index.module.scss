@@ -4,7 +4,8 @@
   align-items: center;
   padding: 20px 50px;
   h1 .Link {
-    color: #333333;
+    filter: drop-shadow(4px 4px 7px #000000ad);
+    color: #fff;
     text-decoration: none;
   }
   .ul_pages {
@@ -15,18 +16,13 @@
     li {
       cursor: pointer;
       .Link {
+        filter: drop-shadow(4px 4px 7px #000000ad);
         text-decoration: none;
-        color: #333333;
+        color: #fff;
       }
     }
   }
-  .form input {
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: 1px solid rgba(110, 199, 224, 0.4509803922);
-    background-color: #fff;
-    outline: none;
-  }
+
   .sing_up {
     border: none;
     background: #fa8443;
@@ -45,9 +41,7 @@
     h1 {
       font-size: 25px;
     }
-    .form {
-      display: none;
-    }
+
     .sing_up {
       display: none;
     }

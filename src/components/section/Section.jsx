@@ -1,19 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import styles from "./index.module.scss";
 
 const Section = () => {
+  const navigate = useNavigate();
+
+  const [input, setInput] = useState("");
+
+  const onChange = (e) => setInput(() => e.target.value);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/cities?city=${input.toLowerCase()}`);
+    setInput("");
+  };
   return (
     <div className={styles.Section}>
-      <h3>
-        <Link className={styles.Link} to="/activities">
-          Scegli la tua esperienza
-        </Link>
-      </h3>
-      {/* <h3>
-        <Link className={styles.Link} to="/cities">
-          Scegli la tua località
-        </Link>
-      </h3> */}
+      <form onSubmit={onSubmit} className={styles.form}>
+        <label>Cerca la città</label>
+        <input
+          onChange={onChange}
+          value={input}
+          type="text"
+          placeholder="Search city"
+          required
+        />
+      </form>
     </div>
   );
 };

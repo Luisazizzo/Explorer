@@ -1,11 +1,9 @@
 import { GET } from "../../utils/http";
 import CardListActivities from "../cardListActivities";
-import CardListCity from "../cardListCity";
 import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 
 const ContentList = ({ title, endpoint }) => {
-  const [cityList, setCityList] = useState([]);
   const [activityList, setActivityList] = useState([]);
 
   useEffect(() => {

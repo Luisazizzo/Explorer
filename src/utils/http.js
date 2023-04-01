@@ -8,3 +8,8 @@ export const GET = async (endpoint) => {
 
   return data;
 };
+
+export const httpGetImage = (query) =>
+  fetch(
+    `https://api.qwant.com/v3/search/images?count=1&q=${query}&t=images&safesearch=1&locale=it_IT&offset=0&device=desktop`
+  ).then((response) => response.json());
